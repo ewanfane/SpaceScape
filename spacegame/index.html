@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="mainstyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div class="upperhead">
+    <h1 class="headitem">Space Scape</h1>
+    <div class="nav headitem">
+        <a href="#htp" class="button">How To Play</a>
+        <a href="game.html" class="button">Play Space Scape</a>
+        <a href="#atg" class="button">About The Game</a>
+    </div>
+    </div>
+    <div class="lowerhead"></div>
+
+    <div class="uppermain"></div>
+
+    <div class="lowermain" id="htp">
+        <h2>How To Play</h2>
+        <p>
+            Space Scape is an easy game to learn but difficult to master. You are a space traveler but a horde of evil space aliens now wants you dead,
+            you will have to dodge their laser fire as you rocket through space dodging meteors and UFO's. Space Scape is endless, however it gets increasingly
+            difficult as your score increases.
+        </p>
+        <p>
+            The game controls are the up, down, left and right arrow keys. Your rocket is constanly flying up however you can slow your rocket temporarily by 
+            pressing the down key, beware though because if you slow too much the aliens will catch up and you may crash. Your rocket will return to full 
+            speed when you release that key. You also have the left and right keys to dodge incoming projectiles. The up arrow allows you to shoot object that are
+            above you.
+        </p>
+        <p>
+            There are 4 ways to die in Space Scape. If you collide with an alien spaceship, if you get hit by a laser, if you collide with a meteor and if you 
+            collide with a UFO. If you are unsure how close you can get to aliens, meteorites and UFO's you can toggle hit boxes to show the boundaries of each game 
+            object. If you just want to see how the game works you can toggle God mode and forget all about death.
+        </p>
+        <p>
+            There are 2 consumable items in the game as well. Because your ammo is finite you have to restock, Throughout the game there will be ammo boxes you can 
+            collect. they look like this <img src="resources/ammoImage.png" width="25" height="25">. You can also find nukes which will blow up all current enemies 
+            on the screen. They look like this <img src="resources/nuke.png" width="25" height="25">.
+        </p>
+    </div>
+
+    <div class="upperatg"></div>
+
+    <div class="lowermain purp" id="atg">
+        <h2>About The Game</h2>
+        <p>
+            To keep the code clean and readable I used classes and then functions to add enemies or objects as needed. the background is a seamless image of space
+            that simply keeps repeating to give the illusion of constant motion. There is a variable gameSpeed that singlehandedly controls how quickly new enemies are 
+            added into the game. This works by subtracting the current score from an ititial set interval, thus each time the score increases the interval decreases. it 
+            is limited to make sure that a reasonable minimum interval always exists. once the player reaches a score of 3500 the game does not get anymore difficult.
+        </p>
+        <p>
+            Finding sprites for this project was suprisingly hard and full sprite sheets was even harder. As such there are a couple of things that I would point out, 
+            firstly the rocket sprite didnt come as a sprite sheet so in order to animate the thruster I had to use an inverted image of a candle flame sprite sheet 
+            that I did find. The meteor also came as a single image so I just saved four images of it and rotated each one and combined them into a sprite sheet that way, 
+            there was no good examples of certain game assets such as the icons for ammo and nukes so they are custom made.
+        </p>
+        <p>
+            The sound effects were not hard to find however I found that the browser console would display an error because it didnt like those effects autoplaying. to 
+            combat that the game requires the user to first press the start button on the page and then the startGame function will register that and start the game. 
+        </p>
+        <p>
+            To make the game mechanics unique you cant move up with any keys instead the player will always want to return to a specified heigth on canvas. As it aproaches 
+            that height it slows down gradually to make it apear smoother. Making the ammo finite makes the game more difficult and strategic so you have to think about 
+            using it more carefully. Also each enemy uses a differant moevement pattern. the aliens chasing the Player go from left to right shooting at random intervals,
+            the meteors fall from a random X coordinate at a random speed and X direction, the UFO's travel from left to right along a sine wave.
+        </p>
+
+    </div>
+
+    <footer>Built by Ewan Fane</footer>
+</body>
+</html>

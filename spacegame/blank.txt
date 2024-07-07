@@ -1,0 +1,6 @@
+ammoArray.forEach((ammo index) => {
+                if (ammo.x + ammo.width > this.x &&
+                    ammo.x < this.x + this.width &&
+                    ammo.y + ammo.height > this.y &&
+                    ammo.y < this.y + this.height) {
+                    ammo.splice(index, 1);}
