@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 95%;
+    width: auto;
+    border: 1px white solid;
+}
+
+img {
+    display: none;
+}
+
+
+.buttons {
+    display: block;
+    margin: 3%;
+    padding: 10px;
+    background-color: blueviolet;
+    color: aliceblue;
+    font-family: Impact, sans-serif;
+    font-size: 20px;
+}
+
+.restart {
+    font-size: 35px;
+    color: aliceblue;
+    font-family: Impact, sans-serif;
+    background-color: blueviolet;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+}
+
+.loadingScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
