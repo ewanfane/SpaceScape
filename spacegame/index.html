@@ -49,26 +49,12 @@
     <div class="lowermain purp" id="atg">
         <h2>About The Game</h2>
         <p>
-            To keep the code clean and readable I used classes and then functions to add enemies or objects as needed. the background is a seamless image of space
-            that simply keeps repeating to give the illusion of constant motion. There is a variable gameSpeed that singlehandedly controls how quickly new enemies are 
-            added into the game. This works by subtracting the current score from an ititial set interval, thus each time the score increases the interval decreases. it 
-            is limited to make sure that a reasonable minimum interval always exists. once the player reaches a score of 3500 the game does not get anymore difficult.
+            SpaceScape was one of the first projects I built using JS, due to this its likely to have many inneficiencies and redundancies. I dont currently 
+            maintain or update this project however every now and again I get a spark of interest and make some minor adjustments. I released it on GitHub as 
+            an example of an easy game that anyone can make with a little bit of time and will. 
         </p>
         <p>
-            Finding sprites for this project was suprisingly hard and full sprite sheets was even harder. As such there are a couple of things that I would point out, 
-            firstly the rocket sprite didnt come as a sprite sheet so in order to animate the thruster I had to use an inverted image of a candle flame sprite sheet 
-            that I did find. The meteor also came as a single image so I just saved four images of it and rotated each one and combined them into a sprite sheet that way, 
-            there was no good examples of certain game assets such as the icons for ammo and nukes so they are custom made.
-        </p>
-        <p>
-            The sound effects were not hard to find however I found that the browser console would display an error because it didnt like those effects autoplaying. to 
-            combat that the game requires the user to first press the start button on the page and then the startGame function will register that and start the game. 
-        </p>
-        <p>
-            To make the game mechanics unique you cant move up with any keys instead the player will always want to return to a specified heigth on canvas. As it aproaches 
-            that height it slows down gradually to make it apear smoother. Making the ammo finite makes the game more difficult and strategic so you have to think about 
-            using it more carefully. Also each enemy uses a differant moevement pattern. the aliens chasing the Player go from left to right shooting at random intervals,
-            the meteors fall from a random X coordinate at a random speed and X direction, the UFO's travel from left to right along a sine wave.
+            Anyone is more than welcome to copy, edit and add to this as they see fit, all game assets used are in the public domain or royalty free 
         </p>
 
     </div>

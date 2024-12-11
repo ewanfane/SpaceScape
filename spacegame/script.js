@@ -759,10 +759,12 @@ window.addEventListener('load', function () {
 
     function draw() {
         intervalUpdater()
-        let currentTime = performance.now();
+        let currentTime = Date.now();
         let deltaTime = (currentTime - previousTime);
-        previousTime = currentTime;
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        if (deltaTime >= 1.7) {
+            console.log(Date.now())
+            previousTime = currentTime;
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
         background.draw();
         background.update();
         player.draw();
@@ -774,6 +776,7 @@ window.addEventListener('load', function () {
         ufoHandler(deltaTime);
         bulletHandler(deltaTime);
         scoreKeeper();
+        }
 
         if (gameOver && finalBoom === 0) {
             let restartButton = document.createElement('button');
